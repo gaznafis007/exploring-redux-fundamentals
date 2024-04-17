@@ -1,6 +1,8 @@
+import { actionType } from "./initialValue";
+
 export const userReducer = (userInfo, action) => {
   switch (action.type) {
-    case "UPDATE_USER_INFO":
+    case actionType.updateInfo:
       return { ...userInfo, [action.name]: action.payload.value };
     default:
       return userInfo;
